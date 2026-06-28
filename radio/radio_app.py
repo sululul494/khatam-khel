@@ -11,6 +11,7 @@ from queue import Queue, Empty
 import os
 import json
 import secrets
+import base64
 from datetime import datetime
 import select
 
@@ -18,6 +19,16 @@ from youtube_dl import YouTubeDownloader, COOKIES_FILE
 from queue_manager import QueueManager
 
 # ==================== SETUP ====================
+
+# If running on Railway (no cookies.txt on disk), decode from env var
+_cookies_b64 = os.getenv('COOKIES_B64', '')
+if _cookies_b64 and not COOKIES_FILE.exists():
+    try:
+        COOKIES_FILE.parent.mkdir(parents=True, exist_ok=True)
+        COOKIES_FILE.write_bytes(base64.b64decode(_cookies_b64))
+        print(f"🍪 Cookies loaded from COOKIES_B64 env var ({COOKIES_FILE.stat().st_size} bytes)")
+    except Exception as e:
+        print(f"⚠️  Failed to decode COOKIES_B64: {e}")
 
 AUTO_DJ_PLAYLIST = "https://youtube.com/playlist?list=PLDIoUOhQQPlXzhp-83rECoLaV6BwFtNC4"
 
