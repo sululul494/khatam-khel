@@ -1,25 +1,5 @@
 [
   {
-    "title": "Doechii - Anxiety (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=1EF0VOd3WGA",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "1EF0VOd3WGA",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:49:42.820296"
-  },
-  {
-    "title": "Temper City - Self Aware",
-    "url": "https://www.youtube.com/watch?v=gmUZHkdjlOI",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "gmUZHkdjlOI",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:49:51.119628"
-  },
-  {
     "title": "Justin Bieber, Nicki Minaj \u2013 Beauty And A Beat (Lyrics)",
     "url": "https://www.youtube.com/watch?v=J9abt3xpdDU",
     "duration": null,
@@ -998,5 +978,25 @@
     "id": "zgaCZOQCpp8",
     "requested_by": "Auto DJ",
     "played_at": "2026-06-28T12:17:01.912046"
+  },
+  {
+    "title": "Dominic Fike - Babydoll (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+    "duration": 99.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "-J2rSm8K9_Y",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-28T12:22:45.407175"
+  },
+  {
+    "title": "Dominic Fike - Babydoll (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+    "duration": 99.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "-J2rSm8K9_Y",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-28T12:24:39.603796"
   }
 ]

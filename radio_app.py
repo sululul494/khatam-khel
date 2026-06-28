@@ -204,7 +204,7 @@ def stream_song(song: Dict[str, Any]) -> bool:
 
     # yt-dlp downloads audio and writes raw audio bytes to stdout
     ydlp_proc = subprocess.Popen(
-        ydlp_cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL
+        ydlp_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
     )
 
     # FFmpeg reads from yt-dlp's stdout and encodes to MP3
@@ -216,7 +216,7 @@ def stream_song(song: Dict[str, Any]) -> bool:
         '-b:a', '128k',
         '-f', 'mp3',
         '-'
-    ], stdin=ydlp_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    ], stdin=ydlp_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     # Let ydlp_proc receive SIGPIPE when ffmpeg closes stdin
     ydlp_proc.stdout.close()
@@ -274,6 +274,17 @@ def stream_song(song: Dict[str, Any]) -> bool:
 
     kill_proc(ffmpeg_proc)
     kill_proc(ydlp_proc)
+
+    # Log any yt-dlp errors
+    try:
+        ydlp_err = ydlp_proc.stderr.read().decode(errors='replace').strip()
+        if ydlp_err:
+            print(f"⚠️  yt-dlp stderr [{title}]: {ydlp_err[:500]}")
+        ffmpeg_err = ffmpeg_proc.stderr.read().decode(errors='replace').strip()
+        if ffmpeg_err and 'error' in ffmpeg_err.lower():
+            print(f"⚠️  ffmpeg stderr [{title}]: {ffmpeg_err[:200]}")
+    except Exception:
+        pass
 
     with ffmpeg_lock:
         current_ffmpeg = None
