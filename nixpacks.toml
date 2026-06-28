@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311", "ffmpeg"]
+
+[phases.install]
+cmds = ["pip install -r radio/requirements.txt"]
+
+[start]
+cmd = "cd radio && python radio_app.py"
