@@ -1,0 +1,23 @@
+{
+  "defaultPlaylistGenre": "bollywood",
+  "autoPlaylistRotation": true,
+  "maxQueueSize": 50,
+  "streamBitrate": 128,
+  "enableIcecast": false,
+  "icecastHost": "localhost",
+  "icecastPort": 8000,
+  "icecastMount": "/radio.mp3",
+  "icecastPassword": "hackme",
+  "icecastName": "Python Radio",
+  "icecastDescription": "Multi-platform music radio",
+  "icecastGenre": "Various",
+  "genres": [
+    "all",
+    "pop",
+    "rock",
+    "bollywood",
+    "edm",
+    "mix",
+    "chill"
+  ]
+}

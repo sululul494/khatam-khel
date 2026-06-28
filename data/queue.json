@@ -1,0 +1,814 @@
+{
+  "queue": [],
+  "current_song": {
+    "title": "Dominic Fike - Babydoll (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+    "duration": 99.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "-J2rSm8K9_Y",
+    "requested_by": "Auto DJ"
+  },
+  "default_playlist": [
+    {
+      "title": "Lady Gaga, Bruno Mars - Die With A Smile (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=zgaCZOQCpp8",
+      "duration": 250.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "zgaCZOQCpp8"
+    },
+    {
+      "title": "Bruno Mars - Risk It All (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=N7ETOxQ2KTE",
+      "duration": 205.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "N7ETOxQ2KTE"
+    },
+    {
+      "title": "Alex Warren - Ordinary (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=byxFUKxhT3s",
+      "duration": 186.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "byxFUKxhT3s"
+    },
+    {
+      "title": "Taylor Swift - The Fate of Ophelia",
+      "url": "https://www.youtube.com/watch?v=WNmsURkR2-w",
+      "duration": 227.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "WNmsURkR2-w"
+    },
+    {
+      "title": "Doechii - Anxiety (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=1EF0VOd3WGA",
+      "duration": 250.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "1EF0VOd3WGA"
+    },
+    {
+      "title": "Temper City - Self Aware",
+      "url": "https://www.youtube.com/watch?v=gmUZHkdjlOI",
+      "duration": 181.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "gmUZHkdjlOI"
+    },
+    {
+      "title": "Justin Bieber, Nicki Minaj \u2013 Beauty And A Beat (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=J9abt3xpdDU",
+      "duration": 229.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "J9abt3xpdDU"
+    },
+    {
+      "title": "Artemas - i like the way you kiss me (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=To7wHvDFu2M",
+      "duration": 144.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "To7wHvDFu2M"
+    },
+    {
+      "title": "Sienna Spiro - Die On This Hill (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=nO0MxNJQT1E",
+      "duration": 217.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "nO0MxNJQT1E"
+    },
+    {
+      "title": "*NSYNC - Bye Bye Bye (Lyrics) (Deadpool 3 Soundtrack)",
+      "url": "https://www.youtube.com/watch?v=2ydCvkxuNm4",
+      "duration": 201.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "2ydCvkxuNm4"
+    },
+    {
+      "title": "Katy Perry - The One That Got Away (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=2ljKgfeDi-c",
+      "duration": 228.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "2ljKgfeDi-c"
+    },
+    {
+      "title": "Sabrina Carpenter - Please Please Please (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=dxWXJmsDHE8",
+      "duration": 186.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "dxWXJmsDHE8"
+    },
+    {
+      "title": "WizTheMc, bees & honey - Show Me Love (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=329iFlRszxs",
+      "duration": 177.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "329iFlRszxs"
+    },
+    {
+      "title": "Post Malone & Morgan Wallen - I Had Some Help (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=KqVIjvBzGR0",
+      "duration": 182.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "KqVIjvBzGR0"
+    },
+    {
+      "title": "Tyla - CHANEL (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=HE20ic6Z6Ic",
+      "duration": 189.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "HE20ic6Z6Ic"
+    },
+    {
+      "title": "Rihanna \u2013 Breakin' Dishes (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=Q6DqUEEJtMQ",
+      "duration": 201.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Q6DqUEEJtMQ"
+    },
+    {
+      "title": "Tate McRae - TIT FOR TAT (Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=u-HEopHeHb8",
+      "duration": 177.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "u-HEopHeHb8"
+    },
+    {
+      "title": "Justin Bieber - Beauty And A Beat (Lyrics) ft. Nicki Minaj",
+      "url": "https://www.youtube.com/watch?v=2jTwoSFdfSI",
+      "duration": 227.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "2jTwoSFdfSI"
+    },
+    {
+      "title": "sombr - back to friends (lyrics)",
+      "url": "https://www.youtube.com/watch?v=Pb6r6I1dmJA",
+      "duration": 200.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Pb6r6I1dmJA"
+    },
+    {
+      "title": "Tanner Grigoli - \"Love You Right\" (Official Music Video)",
+      "url": "https://www.youtube.com/watch?v=B4TdbFWlbyo",
+      "duration": 188.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "B4TdbFWlbyo"
+    },
+    {
+      "title": "ROS\u00c9 & Bruno Mars - APT. (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=i_SsnRdgitA",
+      "duration": 171.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "i_SsnRdgitA"
+    },
+    {
+      "title": "Man I Need - Olivia Dean (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=x1o2NuPWRCg",
+      "duration": 184.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "x1o2NuPWRCg"
+    },
+    {
+      "title": "Alan Murin - All I need is love |Official Video|",
+      "url": "https://www.youtube.com/watch?v=pxoUpVBr-Yg",
+      "duration": 205.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "pxoUpVBr-Yg"
+    },
+    {
+      "title": "Dominic Fike - Babydoll (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=92GNL_85E1o",
+      "duration": 99.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "92GNL_85E1o"
+    },
+    {
+      "title": "Ella Langley - Choosin' Texas (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=jlvl4gaHJpM",
+      "duration": 232.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "jlvl4gaHJpM"
+    },
+    {
+      "title": "Jordan Joy - LED Moon (Official Visualiser)",
+      "url": "https://www.youtube.com/watch?v=aCxoB9roe-0",
+      "duration": 199.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "aCxoB9roe-0"
+    },
+    {
+      "title": "Huntrix - Golden (Lyrics) KPop Demon Hunters",
+      "url": "https://www.youtube.com/watch?v=htk6MRjmcnQ",
+      "duration": 193.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "htk6MRjmcnQ"
+    },
+    {
+      "title": "Olivia Dean - So Easy (To Fall In Love) (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=9JSn36U7d4w",
+      "duration": 169.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "9JSn36U7d4w"
+    },
+    {
+      "title": "Lil Bean - family not a group (Official Video)",
+      "url": "https://www.youtube.com/watch?v=uO7P9bi03Yc",
+      "duration": 118.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "uO7P9bi03Yc"
+    },
+    {
+      "title": "Malcolm Todd - Earrings (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=jJR9v1WwIuI",
+      "duration": 152.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "jJR9v1WwIuI"
+    },
+    {
+      "title": "PinkPantheress - Stateside + Zara Larsson (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=Qhd6q7pH30o",
+      "duration": 185.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Qhd6q7pH30o"
+    },
+    {
+      "title": "Gracie Abrams - That\u2019s So True (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=K57UcxcvqnM",
+      "duration": 167.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "K57UcxcvqnM"
+    },
+    {
+      "title": "Bella Kay - iloveitiloveitiloveit (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=_mNTMz8JalU",
+      "duration": 184.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "_mNTMz8JalU"
+    },
+    {
+      "title": "Alex Warren - FEVER DREAM (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=-yf_ra3HPKk",
+      "duration": 154.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "-yf_ra3HPKk"
+    },
+    {
+      "title": "Teddy Swims - Bad Dreams (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=qs3Pw97tXHQ",
+      "duration": 185.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "qs3Pw97tXHQ"
+    },
+    {
+      "title": "Ariana Grande - twilight zone (lyric visualizer)",
+      "url": "https://www.youtube.com/watch?v=5UE2kT5LxE0",
+      "duration": 199.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "5UE2kT5LxE0"
+    },
+    {
+      "title": "Justin Bieber - Yukon (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=7k-HUweT_4Q",
+      "duration": 165.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "7k-HUweT_4Q"
+    },
+    {
+      "title": "Dominic Fike - White Keys (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=fAR_V7QyA58",
+      "duration": 145.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "fAR_V7QyA58"
+    },
+    {
+      "title": "Sabrina Carpenter - Tears (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=AWvcILdlkmQ",
+      "duration": 161.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "AWvcILdlkmQ"
+    },
+    {
+      "title": "Dancing Green Alien - Y Qu\u00e9 Fue? (Official Music Video)",
+      "url": "https://www.youtube.com/watch?v=qVAXGPrbGT8",
+      "duration": 124.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "qVAXGPrbGT8"
+    },
+    {
+      "title": "KATSEYE (\ucea3\uce20\uc544\uc774) 'Pinky Up' (Color Coded Lyrics)",
+      "url": "https://www.youtube.com/watch?v=W56YWbumF1U",
+      "duration": 132.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "W56YWbumF1U"
+    },
+    {
+      "title": "Zara Larsson - Lush Life (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=aAXLhvrfaT8",
+      "duration": 202.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "aAXLhvrfaT8"
+    },
+    {
+      "title": "Billie Eilish - BIRDS OF A FEATHER (Official Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=d5gf9dXbPi0",
+      "duration": 212.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "d5gf9dXbPi0"
+    },
+    {
+      "title": "Harry Styles - American Girls (Official Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=DcGVFWm5zsk",
+      "duration": 214.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "DcGVFWm5zsk"
+    },
+    {
+      "title": "I Thought I Saw Your Face Today - She And Him (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=31IUfFDgtMs",
+      "duration": 167.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "31IUfFDgtMs"
+    },
+    {
+      "title": "Djo - End Of Beginning (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=B3Z4XGAxJB0",
+      "duration": 160.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "B3Z4XGAxJB0"
+    },
+    {
+      "title": "Lil Uzi Vert - What You Saying (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=c5-K9rIkPbI",
+      "duration": 132.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "c5-K9rIkPbI"
+    },
+    {
+      "title": "Gigi Perez \u2013 Sailor Song (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=f1FuAxuhvq4",
+      "duration": 212.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "f1FuAxuhvq4"
+    },
+    {
+      "title": "Ravyn Lenae - Love Me Not (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=NB7WuqWzDhw",
+      "duration": 214.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "NB7WuqWzDhw"
+    },
+    {
+      "title": "Yung Gravy - HBO [Official Video]",
+      "url": "https://www.youtube.com/watch?v=Tu1Y1fYtib4",
+      "duration": 228.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Tu1Y1fYtib4"
+    },
+    {
+      "title": "Tame Impala - Dracula (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=HWyzKmXquJk",
+      "duration": 206.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "HWyzKmXquJk"
+    },
+    {
+      "title": "Saja Boys - Your Idol (Lyrics) KPop Demon Hunters",
+      "url": "https://www.youtube.com/watch?v=5QIQ5QHqDbw",
+      "duration": 192.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "5QIQ5QHqDbw"
+    },
+    {
+      "title": "Chappell Roan - Good Luck, Babe! (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=tktfiY4kXZc",
+      "duration": 219.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "tktfiY4kXZc"
+    },
+    {
+      "title": "HAVEN. - I RUN (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=hTHmk4_HnV4",
+      "duration": 130.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "hTHmk4_HnV4"
+    },
+    {
+      "title": "ZLATA OGNEVICH - ONE DAY",
+      "url": "https://www.youtube.com/watch?v=zHpSZkzxK58",
+      "duration": 232.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "zHpSZkzxK58"
+    },
+    {
+      "title": "cass\u00f6, RAYE, D-Block Europe - Prada (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=ZOYg4VXojCc",
+      "duration": 131.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "ZOYg4VXojCc"
+    },
+    {
+      "title": "sombr - undressed (official lyric video)",
+      "url": "https://www.youtube.com/watch?v=CtRn6eqVnvY",
+      "duration": 183.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "CtRn6eqVnvY"
+    },
+    {
+      "title": "Eloise - It All Goes (Visualizer)",
+      "url": "https://www.youtube.com/watch?v=-xq36F92BDY",
+      "duration": 140.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "-xq36F92BDY"
+    },
+    {
+      "title": "Alex Warren - Eternity (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=fz5gmZV9_so",
+      "duration": 190.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "fz5gmZV9_so"
+    },
+    {
+      "title": "David Guetta & Sia - Beautiful People (Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=SswocIow6pc",
+      "duration": 188.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "SswocIow6pc"
+    },
+    {
+      "title": "Taylor Swift - Opalite (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=DN0G0Lbj6os",
+      "duration": 237.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "DN0G0Lbj6os"
+    },
+    {
+      "title": "Justin Bieber - DAISIES (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=8xgsIpN7F5I",
+      "duration": 177.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "8xgsIpN7F5I"
+    },
+    {
+      "title": "Dave, Tems - Raindance (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=bhoybya39QU",
+      "duration": 220.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "bhoybya39QU"
+    },
+    {
+      "title": "Lola Young - Messy (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=1hpkQ_ag470",
+      "duration": 290.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "1hpkQ_ag470"
+    },
+    {
+      "title": "Michael Jackson - Human Nature (Lyrics Video) \ud83c\udfa4",
+      "url": "https://www.youtube.com/watch?v=UxnvqXGYpvY",
+      "duration": 245.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "UxnvqXGYpvY"
+    },
+    {
+      "title": "Zara Larsson - Midnight Sun",
+      "url": "https://www.youtube.com/watch?v=ZVwTBRL6LDM",
+      "duration": 195.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "ZVwTBRL6LDM"
+    },
+    {
+      "title": "Miley Cyrus - Flowers (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=OCGpwIkkuXQ",
+      "duration": 200.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "OCGpwIkkuXQ"
+    },
+    {
+      "title": "Sierra - You Broke Me (Music Video)",
+      "url": "https://www.youtube.com/watch?v=cX3c1ItAH6o",
+      "duration": 102.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "cX3c1ItAH6o"
+    },
+    {
+      "title": "Sabrina Carpenter - Espresso (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=D_hoEwdRo1I",
+      "duration": 176.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "D_hoEwdRo1I"
+    },
+    {
+      "title": "Lady Gaga - Abracadabra (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=lwOuEq_FoOo",
+      "duration": 222.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "lwOuEq_FoOo"
+    },
+    {
+      "title": "Olivia Dean - A Couple Minutes (Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=lrS1LC2cu-U",
+      "duration": 213.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "lrS1LC2cu-U"
+    },
+    {
+      "title": "Darin feat. Eloise - Falling In love (Music Video)",
+      "url": "https://www.youtube.com/watch?v=nb39Ym4YwVs",
+      "duration": 121.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "nb39Ym4YwVs"
+    },
+    {
+      "title": "Ed Sheeran - Sapphire (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=27ZngM__Xzk",
+      "duration": 179.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "27ZngM__Xzk"
+    },
+    {
+      "title": "Chappell Roan - HOT TO GO! (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=1mbbr-cJsrk",
+      "duration": 185.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "1mbbr-cJsrk"
+    },
+    {
+      "title": "Kendrick Lamar - luther (Lyrics) ft. SZA",
+      "url": "https://www.youtube.com/watch?v=0vPdpUiVWi8",
+      "duration": 179.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "0vPdpUiVWi8"
+    },
+    {
+      "title": "Alexia - I just might (Visualizer)",
+      "url": "https://www.youtube.com/watch?v=xXg7T_eq8Nc",
+      "duration": 129.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "xXg7T_eq8Nc"
+    },
+    {
+      "title": "@BillieEilish  - WILDFLOWER (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=8ObJEXpmZ10",
+      "duration": 262.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "8ObJEXpmZ10"
+    },
+    {
+      "title": "Sabrina Carpenter - Manchild (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=TAZkHYyio-M",
+      "duration": 214.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "TAZkHYyio-M"
+    },
+    {
+      "title": "BLACKPINK '\ub6f0\uc5b4(JUMP)' (Color Coded Lyrics)",
+      "url": "https://www.youtube.com/watch?v=3tiLDChrokA",
+      "duration": 180.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "3tiLDChrokA"
+    },
+    {
+      "title": "KATSEYE - Internet Girl (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=WafvNKk7Tco",
+      "duration": 164.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "WafvNKk7Tco"
+    },
+    {
+      "title": "yung kai - blue (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=4adZ7AguVcw",
+      "duration": 215.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "4adZ7AguVcw"
+    },
+    {
+      "title": "Katy Perry - The One That Got Away (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=BwYRQc_4Bdw",
+      "duration": 229.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "BwYRQc_4Bdw"
+    },
+    {
+      "title": "Taylor Swift - Cruel Summer",
+      "url": "https://www.youtube.com/watch?v=JLJcHbYSlB8",
+      "duration": 180.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "JLJcHbYSlB8"
+    },
+    {
+      "title": "Morgan Wallen - What I Want (feat. Tate McRae) (Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=hNrwlzBeFN8",
+      "duration": 184.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "hNrwlzBeFN8"
+    },
+    {
+      "title": "@sza - Saturn (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=eYalXJvJ2Mg",
+      "duration": 186.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "eYalXJvJ2Mg"
+    },
+    {
+      "title": "Addison Rae - Diet Pepsi (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=XgSobzBJFtg",
+      "duration": 166.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "XgSobzBJFtg"
+    },
+    {
+      "title": "Hozier - Too Sweet (Lyrics) \"i take my whiskey neat\"",
+      "url": "https://www.youtube.com/watch?v=Sg3hU_sdhKw",
+      "duration": 252.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Sg3hU_sdhKw"
+    },
+    {
+      "title": "Rema, Selena Gomez - Calm Down (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=G-D80U_u3sk",
+      "duration": 237.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "G-D80U_u3sk"
+    },
+    {
+      "title": "Kehlani - Folded (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=BclvXp0t-G0",
+      "duration": 239.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "BclvXp0t-G0"
+    },
+    {
+      "title": "Metito - On my mind (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=IHfmFfBhf5s",
+      "duration": 183.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "IHfmFfBhf5s"
+    },
+    {
+      "title": "The Weeknd, Ariana Grande - Die For You (Remix / Lyric Video)",
+      "url": "https://www.youtube.com/watch?v=YQ-qToZUybM",
+      "duration": 233.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "YQ-qToZUybM"
+    },
+    {
+      "title": "Stephen Sanchez - Until I Found You (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=GhQxrCrVSyw",
+      "duration": 175.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "GhQxrCrVSyw"
+    },
+    {
+      "title": "Tom Odell - Another Love (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=Jkj36B1YuDU",
+      "duration": 242.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "Jkj36B1YuDU"
+    },
+    {
+      "title": "James Arthur - Train Wreck (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=CveANi17YfU",
+      "duration": 209.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "CveANi17YfU"
+    },
+    {
+      "title": "James Arthur - Impossible (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=mzAwKKRGXSk",
+      "duration": 212.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "mzAwKKRGXSk"
+    },
+    {
+      "title": "Ella Langley - Be Her (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=BV9pJr7iyhg",
+      "duration": 218.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "BV9pJr7iyhg"
+    },
+    {
+      "title": "Pitbull x Lil Jon - Satalanaaa (Party On The Island)",
+      "url": "https://www.youtube.com/watch?v=PRmoJaY-g8g",
+      "duration": 141.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "PRmoJaY-g8g"
+    },
+    {
+      "title": "Sara Bareilles - Home (Official Music Video)",
+      "url": "https://www.youtube.com/watch?v=KUiHnSipa5I",
+      "duration": 299.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "KUiHnSipa5I"
+    },
+    {
+      "title": "Yarosa Burnos \u2014 \u201cWhy\u201d",
+      "url": "https://www.youtube.com/watch?v=VyngFd6ROGw",
+      "duration": 170.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "VyngFd6ROGw"
+    },
+    {
+      "title": "Dominic Fike - Babydoll (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+      "duration": 99.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "-J2rSm8K9_Y"
+    }
+  ]
+}
