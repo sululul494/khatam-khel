@@ -275,11 +275,14 @@ def stream_song(song: Dict[str, Any]) -> bool:
     kill_proc(ffmpeg_proc)
     kill_proc(ydlp_proc)
 
-    # Log any yt-dlp errors
+    # Log any yt-dlp errors and detect rate limiting
+    rate_limited = False
     try:
         ydlp_err = ydlp_proc.stderr.read().decode(errors='replace').strip()
         if ydlp_err:
             print(f"⚠️  yt-dlp stderr [{title}]: {ydlp_err[:500]}")
+            if 'rate-limit' in ydlp_err.lower() or 'rate limit' in ydlp_err.lower():
+                rate_limited = True
         ffmpeg_err = ffmpeg_proc.stderr.read().decode(errors='replace').strip()
         if ffmpeg_err and 'error' in ffmpeg_err.lower():
             print(f"⚠️  ffmpeg stderr [{title}]: {ffmpeg_err[:200]}")
@@ -288,6 +291,11 @@ def stream_song(song: Dict[str, Any]) -> bool:
 
     with ffmpeg_lock:
         current_ffmpeg = None
+
+    if rate_limited:
+        print(f"🚦 Rate-limited by YouTube — backing off 60s before next song")
+        time.sleep(60)
+        return False
 
     print(f"✅ Finished: {title}")
     return True
@@ -309,10 +317,11 @@ def stream_manager():
                 continue
 
             stream_song(song)
+            time.sleep(2)
 
         except Exception as e:
             print(f"❌ Stream error: {e}")
-            time.sleep(3)
+            time.sleep(10)
 
 
 # ==================== AUTO DJ ====================

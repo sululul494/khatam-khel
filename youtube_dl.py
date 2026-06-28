@@ -16,9 +16,12 @@ def _base_opts(extra: dict = None) -> dict:
         'nocheckcertificate': True,
         'extractor_args': {
             'youtube': {
-                'player_client': ['android', 'web'],
+                'player_client': ['tv', 'ios'],
             }
         },
+        'sleep_interval_requests': 2,
+        'sleep_interval': 1,
+        'max_sleep_interval': 5,
     }
     if COOKIES_FILE.exists():
         opts['cookiefile'] = str(COOKIES_FILE)
