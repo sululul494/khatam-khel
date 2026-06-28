@@ -245,7 +245,7 @@ accounts.google.com	FALSE	/	TRUE	1817192416	__Host-GAPSTS	gapsts-CiwBtKsiLKRexqV
 .youtube.com	TRUE	/	TRUE	1798189421	DEVICE_INFO	ChxOelkxTmpNMk56UTVOamszTWpnek5ETTFOUT09EO3Gg9IGGKzDg9IG
 .youtube.com	TRUE	/	TRUE	0	SOCS	CAI
 .youtube.com	TRUE	/	TRUE	1782650822	GPS	1
-.youtube.com	TRUE	/	TRUE	0	YSC	0gmqZKITNpQ
+.youtube.com	TRUE	/	TRUE	0	YSC	zR4aQ6rNUnY
 .youtube.com	TRUE	/tv	TRUE	1815469421	__Secure-YT_DERP	CIuu6tv4BQ%3D%3D
 .savefrom.net	TRUE	/	FALSE	1798520742	lang	en
 .savefrom.net	TRUE	/	FALSE	1798520742	uid	622d95abdcba94e9

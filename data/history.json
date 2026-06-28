@@ -1,15 +1,5 @@
 [
   {
-    "title": "Justin Bieber, Nicki Minaj \u2013 Beauty And A Beat (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=J9abt3xpdDU",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "J9abt3xpdDU",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:50:01.061551"
-  },
-  {
     "title": "Artemas - i like the way you kiss me (Lyrics)",
     "url": "https://www.youtube.com/watch?v=To7wHvDFu2M",
     "duration": null,
@@ -998,5 +988,15 @@
     "id": "-J2rSm8K9_Y",
     "requested_by": "Auto DJ",
     "played_at": "2026-06-28T12:24:39.603796"
+  },
+  {
+    "title": "Dominic Fike - Babydoll (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+    "duration": 99.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "-J2rSm8K9_Y",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-28T12:26:17.739999"
   }
 ]
