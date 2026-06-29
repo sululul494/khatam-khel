@@ -178,6 +178,7 @@ def stream_song(song: Dict[str, Any]) -> bool:
 
     url = song.get('url', '')
     if not url:
+        print("❌ No URL provided for song")
         return False
 
     title = song.get('title', 'Unknown')
@@ -205,90 +206,156 @@ def stream_song(song: Dict[str, Any]) -> bool:
 
     ydlp_cmd.append(url)
 
-    # yt-dlp downloads audio and writes raw audio bytes to stdout
-    ydlp_proc = subprocess.Popen(
-        ydlp_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-    )
+    ydlp_proc = None
+    ffmpeg_proc = None
 
-    # FFmpeg reads from yt-dlp's stdout and encodes to MP3
-    ffmpeg_proc = subprocess.Popen([
-        'ffmpeg',
-        '-i', 'pipe:0',
-        '-vn',
-        '-c:a', 'libmp3lame',
-        '-b:a', '128k',
-        '-f', 'mp3',
-        '-'
-    ], stdin=ydlp_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    try:
+        # yt-dlp downloads audio and writes raw audio bytes to stdout
+        ydlp_proc = subprocess.Popen(
+            ydlp_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
 
-    # Let ydlp_proc receive SIGPIPE when ffmpeg closes stdin
-    ydlp_proc.stdout.close()
+        # FFmpeg reads from yt-dlp's stdout and encodes to MP3
+        ffmpeg_proc = subprocess.Popen([
+            'ffmpeg',
+            '-i', 'pipe:0',
+            '-vn',
+            '-c:a', 'libmp3lame',
+            '-b:a', '128k',
+            '-f', 'mp3',
+            '-'
+        ], stdin=ydlp_proc.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    with ffmpeg_lock:
-        current_ffmpeg = ffmpeg_proc
+        # Let ydlp_proc receive SIGPIPE when ffmpeg closes stdin
+        ydlp_proc.stdout.close()
 
-    skip_event.clear()
-    last_data = time.time()
-    # Deadline tracks when the next chunk should be sent (real-time pacing)
-    chunk_deadline = time.time()
+        with ffmpeg_lock:
+            current_ffmpeg = ffmpeg_proc
 
-    while stream_running:
-        if skip_event.is_set():
-            kill_proc(ffmpeg_proc)
-            kill_proc(ydlp_proc)
-            print(f"⏭  Skipped: {title}")
-            return False
+        skip_event.clear()
+        last_data = time.time()
+        chunk_deadline = time.time()
+        ffmpeg_startup_timeout = 30.0  # Wait up to 30s for FFmpeg to start producing data
+        ffmpeg_started = False
+        consecutive_empty_reads = 0
+        max_empty_reads = 10  # Allow up to 10 consecutive empty reads before giving up
 
-        # Sleep until next chunk is due (rate-limit to 128kbps real-time)
-        now = time.time()
-        wait = chunk_deadline - now
-        if wait > 0:
-            # Check skip_event during the sleep in small increments
-            slept = 0.0
-            while slept < wait and not skip_event.is_set():
-                step = min(0.05, wait - slept)
-                time.sleep(step)
-                slept += step
+        while stream_running:
+            # Check for skip event
             if skip_event.is_set():
-                kill_proc(ffmpeg_proc)
-                kill_proc(ydlp_proc)
-                print(f"⏭  Skipped: {title}")
+                print(f"⏭  Skip requested for: {title}")
                 return False
 
-        ready, _, _ = select.select([ffmpeg_proc.stdout], [], [], 0.5)
-        if ready:
+            # Check if FFmpeg has exited unexpectedly
+            ffmpeg_poll = ffmpeg_proc.poll()
+            if ffmpeg_poll is not None:
+                # FFmpeg process ended - check if it had a chance to produce data
+                if not ffmpeg_started:
+                    print(f"❌ FFmpeg exited early (code {ffmpeg_poll}) before producing data")
+                    # Try to read stderr for error info
+                    try:
+                        stderr_data = ffmpeg_proc.stderr.read().decode(errors='replace').strip()
+                        if stderr_data:
+                            print(f"FFmpeg stderr: {stderr_data[:500]}")
+                    except Exception:
+                        pass
+                else:
+                    print(f"✅ FFmpeg finished normally for: {title}")
+                break
+
+            # Check for timeout on data
+            if time.time() - last_data > 60:
+                print(f"⚠️  No data for 60s, skipping: {title}")
+                return False
+
+            # Wait for data from FFmpeg with a longer timeout
+            ready, _, _ = select.select([ffmpeg_proc.stdout], [], [], 1.0)
+            if not ready:
+                # No data ready - check if we're still in startup phase
+                if not ffmpeg_started and time.time() - chunk_deadline > ffmpeg_startup_timeout:
+                    print(f"❌ FFmpeg startup timeout ({ffmpeg_startup_timeout}s) - no data produced")
+                    return False
+                continue
+
+            # Read chunk
             chunk = ffmpeg_proc.stdout.read(CHUNK_SIZE)
             if not chunk:
-                break
+                consecutive_empty_reads += 1
+                if consecutive_empty_reads >= max_empty_reads:
+                    print(f"❌ Too many consecutive empty reads ({max_empty_reads}), stopping")
+                    return False
+                # Small delay before retrying
+                time.sleep(0.1)
+                continue
+
+            # Successfully got data
+            consecutive_empty_reads = 0
+
+            if not ffmpeg_started:
+                ffmpeg_started = True
+                print(f"✅ FFmpeg started producing data for: {title}")
+
             last_data = time.time()
             distribute_chunk(chunk)
-            # Advance deadline; if we fall behind, reset to now
+
+            # Advance deadline for real-time pacing
             chunk_deadline += CHUNK_INTERVAL
             if chunk_deadline < time.time() - 2.0:
                 chunk_deadline = time.time()
-        elif ffmpeg_proc.poll() is not None:
-            break
 
-        if time.time() - last_data > 45:
-            print(f"⚠️  No data for 45s, skipping: {title}")
-            kill_proc(ffmpeg_proc)
-            kill_proc(ydlp_proc)
-            return False
+        # Wait for processes to fully terminate
+        try:
+            if ydlp_proc and ydlp_proc.poll() is None:
+                ydlp_proc.terminate()
+                ydlp_proc.wait(timeout=5)
+        except Exception:
+            try:
+                if ydlp_proc:
+                    ydlp_proc.kill()
+            except Exception:
+                pass
 
-    kill_proc(ffmpeg_proc)
-    kill_proc(ydlp_proc)
+        try:
+            if ffmpeg_proc and ffmpeg_proc.poll() is None:
+                ffmpeg_proc.terminate()
+                ffmpeg_proc.wait(timeout=5)
+        except Exception:
+            try:
+                if ffmpeg_proc:
+                    ffmpeg_proc.kill()
+            except Exception:
+                pass
 
-    # Log any yt-dlp errors and detect rate limiting
+    except Exception as e:
+        print(f"❌ Error streaming {title}: {e}")
+        traceback.print_exc(file=sys.stdout)
+        return False
+    finally:
+        # Ensure cleanup
+        try:
+            if ydlp_proc and ydlp_proc.poll() is None:
+                ydlp_proc.kill()
+        except Exception:
+            pass
+        try:
+            if ffmpeg_proc and ffmpeg_proc.poll() is None:
+                ffmpeg_proc.kill()
+        except Exception:
+            pass
+
+    # Log errors and check for rate limiting
     rate_limited = False
     try:
-        ydlp_err = ydlp_proc.stderr.read().decode(errors='replace').strip()
-        if ydlp_err:
-            print(f"⚠️  yt-dlp stderr [{title}]: {ydlp_err[:500]}")
-            if 'rate-limit' in ydlp_err.lower() or 'rate limit' in ydlp_err.lower():
-                rate_limited = True
-        ffmpeg_err = ffmpeg_proc.stderr.read().decode(errors='replace').strip()
-        if ffmpeg_err and 'error' in ffmpeg_err.lower():
-            print(f"⚠️  ffmpeg stderr [{title}]: {ffmpeg_err[:200]}")
+        if ydlp_proc and ydlp_proc.stderr:
+            ydlp_err = ydlp_proc.stderr.read().decode(errors='replace').strip()
+            if ydlp_err:
+                print(f"⚠️  yt-dlp stderr [{title}]: {ydlp_err[:500]}")
+                if 'rate-limit' in ydlp_err.lower() or 'rate limit' in ydlp_err.lower() or '429' in ydlp_err:
+                    rate_limited = True
+        if ffmpeg_proc and ffmpeg_proc.stderr:
+            ffmpeg_err = ffmpeg_proc.stderr.read().decode(errors='replace').strip()
+            if ffmpeg_err and 'error' in ffmpeg_err.lower():
+                print(f"⚠️  ffmpeg stderr [{title}]: {ffmpeg_err[:200]}")
     except Exception:
         pass
 
@@ -310,9 +377,17 @@ def stream_manager():
     stream_running = True
     print("📻 Stream manager started", flush=True)
 
+    consecutive_errors = 0
+    max_consecutive_errors = 5
+
     try:
         while stream_running:
             try:
+                # Check if skip was requested
+                if skip_event.is_set():
+                    skip_event.clear()
+                    print("⏭  Skip event cleared, moving to next song")
+
                 song = queue_manager.get_next_song()
 
                 if not song:
@@ -320,18 +395,42 @@ def stream_manager():
                     time.sleep(5)
                     continue
 
-                stream_song(song)
-                time.sleep(2)
+                result = stream_song(song)
+
+                if result:
+                    consecutive_errors = 0
+                    # Brief pause between songs to let clients settle
+                    time.sleep(1)
+                else:
+                    consecutive_errors += 1
+                    print(f"⚠️  Song failed ({consecutive_errors}/{max_consecutive_errors} consecutive failures)", flush=True)
+
+                    # If too many consecutive failures, take a break
+                    if consecutive_errors >= max_consecutive_errors:
+                        print(f"🚨 Too many consecutive failures, pausing for 30 seconds")
+                        time.sleep(30)
+                        consecutive_errors = 0
 
             except Exception as e:
+                consecutive_errors += 1
                 print(f"❌ Stream error: {e}", flush=True)
                 traceback.print_exc(file=sys.stdout)
                 sys.stdout.flush()
                 time.sleep(10)
+
+                if consecutive_errors >= max_consecutive_errors:
+                    print(f"🚨 Too many consecutive errors, pausing for 30 seconds")
+                    time.sleep(30)
+                    consecutive_errors = 0
+
     except BaseException as e:
         print(f"💀 Stream manager crashed: {e}", flush=True)
         traceback.print_exc(file=sys.stdout)
         sys.stdout.flush()
+        # Try to restart the stream manager
+        print("🔄 Attempting to restart stream manager...")
+        time.sleep(5)
+        stream_manager()
 
 
 # ==================== AUTO DJ ====================
@@ -375,6 +474,7 @@ def stream():
     """Live HTTP MP3 stream"""
     def generate():
         client_q: Queue = Queue(maxsize=200)
+        # Grab the latest buffered chunks so new listeners get a short warm‑up
         with stream_lock:
             for chunk in list(stream_buffer)[-10:]:
                 try:
@@ -385,11 +485,21 @@ def stream():
         try:
             while True:
                 try:
-                    chunk = client_q.get(timeout=10)
-                    yield chunk
+                    # Increased timeout to 30 s – Railway’s dynos may pause briefly
+                    chunk = client_q.get(timeout=30)
+                    if chunk:
+                        yield chunk
                 except Empty:
-                    continue
+                    # No data received – send a silent placeholder to keep the connection alive
+                    # This avoids the client seeing a premature EOF while the next song is booting
+                    yield b''
+                except Exception as e:
+                    # Log unexpected errors but keep the generator alive
+                    print(f"⚠️ Stream generator error: {e}")
+                    traceback.print_exc(file=sys.stdout)
+                    yield b''
         finally:
+            # Clean up client registration when the connection finishes
             with stream_lock:
                 if client_q in stream_clients:
                     stream_clients.remove(client_q)
