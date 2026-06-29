@@ -5,6 +5,8 @@ from typing import Optional, Dict, Any
 import threading
 import time
 import subprocess
+import traceback
+import sys
 from pathlib import Path
 from collections import deque
 from queue import Queue, Empty
@@ -305,23 +307,30 @@ def stream_manager():
     """Main loop: continuously picks next song and streams it directly"""
     global stream_running
     stream_running = True
-    print("📻 Stream manager started")
+    print("📻 Stream manager started", flush=True)
 
-    while stream_running:
-        try:
-            song = queue_manager.get_next_song()
+    try:
+        while stream_running:
+            try:
+                song = queue_manager.get_next_song()
 
-            if not song:
-                print("⏸  Queue empty, waiting...")
-                time.sleep(5)
-                continue
+                if not song:
+                    print("⏸  Queue empty, waiting...", flush=True)
+                    time.sleep(5)
+                    continue
 
-            stream_song(song)
-            time.sleep(2)
+                stream_song(song)
+                time.sleep(2)
 
-        except Exception as e:
-            print(f"❌ Stream error: {e}")
-            time.sleep(10)
+            except Exception as e:
+                print(f"❌ Stream error: {e}", flush=True)
+                traceback.print_exc(file=sys.stdout)
+                sys.stdout.flush()
+                time.sleep(10)
+    except BaseException as e:
+        print(f"💀 Stream manager crashed: {e}", flush=True)
+        traceback.print_exc(file=sys.stdout)
+        sys.stdout.flush()
 
 
 # ==================== AUTO DJ ====================
