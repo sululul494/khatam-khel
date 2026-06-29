@@ -1,15 +1,5 @@
 [
   {
-    "title": "Teddy Swims - Bad Dreams (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=qs3Pw97tXHQ",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "qs3Pw97tXHQ",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:54:02.567246"
-  },
-  {
     "title": "Ariana Grande - twilight zone (lyric visualizer)",
     "url": "https://www.youtube.com/watch?v=5UE2kT5LxE0",
     "duration": null,
@@ -998,5 +988,15 @@
     "id": "N7ETOxQ2KTE",
     "requested_by": "Auto DJ",
     "played_at": "2026-06-29T04:41:12.625312"
+  },
+  {
+    "title": "Dominic Fike - Babydoll (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=-J2rSm8K9_Y",
+    "duration": 99.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "-J2rSm8K9_Y",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-29T04:44:36.578872"
   }
 ]
