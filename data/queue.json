@@ -1,23 +1,15 @@
 {
   "queue": [],
   "current_song": {
-    "title": "Bruno Mars - Risk It All (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=N7ETOxQ2KTE",
-    "duration": 205.0,
+    "title": "Alex Warren - Ordinary (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=byxFUKxhT3s",
+    "duration": 186.0,
     "thumbnail": "",
     "uploader": "Unknown",
-    "id": "N7ETOxQ2KTE",
+    "id": "byxFUKxhT3s",
     "requested_by": "Auto DJ"
   },
   "default_playlist": [
-    {
-      "title": "Alex Warren - Ordinary (Lyrics)",
-      "url": "https://www.youtube.com/watch?v=byxFUKxhT3s",
-      "duration": 186.0,
-      "thumbnail": "",
-      "uploader": "Unknown",
-      "id": "byxFUKxhT3s"
-    },
     {
       "title": "Taylor Swift - The Fate of Ophelia",
       "url": "https://www.youtube.com/watch?v=WNmsURkR2-w",
@@ -809,6 +801,14 @@
       "thumbnail": "",
       "uploader": "Unknown",
       "id": "N7ETOxQ2KTE"
+    },
+    {
+      "title": "Alex Warren - Ordinary (Lyrics)",
+      "url": "https://www.youtube.com/watch?v=byxFUKxhT3s",
+      "duration": 186.0,
+      "thumbnail": "",
+      "uploader": "Unknown",
+      "id": "byxFUKxhT3s"
     }
   ]
 }

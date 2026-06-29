@@ -1,15 +1,5 @@
 [
   {
-    "title": "Dominic Fike - White Keys (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=fAR_V7QyA58",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "fAR_V7QyA58",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:54:28.553107"
-  },
-  {
     "title": "Sabrina Carpenter - Tears (Lyrics)",
     "url": "https://www.youtube.com/watch?v=AWvcILdlkmQ",
     "duration": null,
@@ -998,5 +988,15 @@
     "id": "N7ETOxQ2KTE",
     "requested_by": "Auto DJ",
     "played_at": "2026-06-29T04:50:23.803562"
+  },
+  {
+    "title": "Alex Warren - Ordinary (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=byxFUKxhT3s",
+    "duration": 186.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "byxFUKxhT3s",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-29T04:53:47.833394"
   }
 ]
