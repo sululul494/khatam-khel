@@ -167,6 +167,9 @@ class QueueManager:
                     upcoming.append(song)
             return upcoming
 
+    def has_active_songs(self):
+        return bool(self.queue or self.default_playlist)
+
     def shuffle_playlist(self):
         with self.lock:
             random.shuffle(self.default_playlist)
