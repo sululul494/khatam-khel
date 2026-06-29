@@ -193,8 +193,8 @@ def stream_song(song: Dict[str, Any]) -> bool:
         'yt-dlp',
         '--quiet',
         '--no-warnings',
-        '--format', 'bestaudio',
-        '--extractor-args', 'youtube:player_client=mweb',
+        '--format', 'bestaudio[ext=m4a]/bestaudio[ext=webm]/bestaudio',
+        '--extractor-args', 'youtube:player_client=android_vr',
         '--output', '-',
     ]
     if COOKIES_FILE.exists():
