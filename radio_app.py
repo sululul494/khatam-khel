@@ -396,6 +396,11 @@ def stream_manager():
                     continue
 
                 result = stream_song(song)
+                queue_manager.clear_current_song()
+                broadcast_update('now_playing', {
+                    'song': queue_manager.get_current_song(),
+                    'queue': queue_manager.get_queue()
+                })
 
                 if result:
                     consecutive_errors = 0
@@ -608,9 +613,14 @@ def autodj_status():
 def skip_song():
     upcoming = queue_manager.get_upcoming_songs(1)
     next_song = upcoming[0] if upcoming else None
+    skipped = queue_manager.clear_current_song()
     skip_event.set()
-    broadcast_update('song_skipped', {'next': next_song})
-    return jsonify({'success': True, 'next_song': next_song})
+    broadcast_update('song_skipped', {'skipped': skipped, 'next': next_song})
+    broadcast_update('now_playing', {
+        'song': queue_manager.get_current_song(),
+        'queue': queue_manager.get_queue()
+    })
+    return jsonify({'success': True, 'skipped': skipped, 'next_song': next_song})
 
 
 @app.route('/api/songs/previous', methods=['GET', 'POST'])

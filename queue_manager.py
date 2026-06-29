@@ -102,10 +102,21 @@ class QueueManager:
                 self.save_queue()
                 return song
 
+            if self.current_song is not None:
+                self.current_song = None
+                self.save_queue()
+
             return None
 
     def get_current_song(self):
         return self.current_song
+
+    def clear_current_song(self):
+        with self.lock:
+            previous = self.current_song
+            self.current_song = None
+            self.save_queue()
+            return previous
 
     def get_queue(self):
         return self.queue.copy()
