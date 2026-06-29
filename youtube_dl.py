@@ -16,7 +16,7 @@ def _base_opts(extra: dict = None) -> dict:
         'nocheckcertificate': True,
         'extractor_args': {
             'youtube': {
-                'player_client': ['tv', 'ios'],
+                'player_client': ['mweb'],
             }
         },
         'sleep_interval_requests': 2,
