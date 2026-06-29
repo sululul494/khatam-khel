@@ -1,25 +1,5 @@
 [
   {
-    "title": "Ariana Grande - twilight zone (lyric visualizer)",
-    "url": "https://www.youtube.com/watch?v=5UE2kT5LxE0",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "5UE2kT5LxE0",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:54:11.528137"
-  },
-  {
-    "title": "Justin Bieber - Yukon (Lyrics)",
-    "url": "https://www.youtube.com/watch?v=7k-HUweT_4Q",
-    "duration": null,
-    "thumbnail": "",
-    "uploader": "Unknown",
-    "id": "7k-HUweT_4Q",
-    "requested_by": "Auto DJ",
-    "played_at": "2026-06-28T08:54:20.212315"
-  },
-  {
     "title": "Dominic Fike - White Keys (Lyrics)",
     "url": "https://www.youtube.com/watch?v=fAR_V7QyA58",
     "duration": null,
@@ -998,5 +978,25 @@
     "id": "-J2rSm8K9_Y",
     "requested_by": "Auto DJ",
     "played_at": "2026-06-29T04:44:36.578872"
+  },
+  {
+    "title": "Lady Gaga, Bruno Mars - Die With A Smile (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=zgaCZOQCpp8",
+    "duration": 250.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "zgaCZOQCpp8",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-29T04:46:14.592857"
+  },
+  {
+    "title": "Bruno Mars - Risk It All (Lyrics)",
+    "url": "https://www.youtube.com/watch?v=N7ETOxQ2KTE",
+    "duration": 205.0,
+    "thumbnail": "",
+    "uploader": "Unknown",
+    "id": "N7ETOxQ2KTE",
+    "requested_by": "Auto DJ",
+    "played_at": "2026-06-29T04:50:23.803562"
   }
 ]
